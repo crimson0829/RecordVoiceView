@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RecordVoiceView">
+
+<!--        录音模式-->
+        <attr name="rvv_voice_mode" format="integer" >
+            <enum name="record" value="1" />
+            <enum name="play" value="2" />
+
+        </attr>
+
+        <attr name="rvv_thumb_radius" format="integer"/>
+
+        <attr name="rvv_thumb_color" format="color"/>
+
+<!--        速率-->
+        <attr name="rvv_speed" format="integer" />
+
+<!--        左偏移量-->
+        <attr name="rvv_line_leftPadding" format="integer"/>
+<!--        进度线宽度-->
+        <attr name="rvv_line_width" format="integer" />
+
+<!--        进度线颜色-->
+        <attr name="rvv_line_color" format="color" />
+<!--        虚线颜色-->
+        <attr name="rvv_line_dash_color" format="color" />
+<!--        虚线宽度-->
+        <attr name="rvv_line_dash_width" format="integer" />
+
+<!--        时间颜色-->
+        <attr name="rvv_node_time_color" format="color" />
+
+<!--        时间是否加粗-->
+        <attr name="rvv_node_time_bold" format="boolean" />
+<!--        时间大小-->
+        <attr name="rvv_node_time_size" format="integer" />
+
+        <!--        识别颜色-->
+        <attr name="rvv_recognize_color" format="color" />
+        <!--        谁别是否加粗-->
+        <attr name="rvv_recognize_bold" format="boolean" />
+        <!--        识别大小-->
+        <attr name="rvv_recognize_size" format="integer" />
+<!--        识别文字背景-->
+        <attr name="rvv_recognize_text_bg" format="color" />
+
+<!--        节点圆颜色-->
+        <attr name="rvv_circle_color" format="color" />
+
+<!--        节点圆外圈大小-->
+        <attr name="rvv_circle_width" format="integer" />
+        <!--        节点圆半径-->
+        <attr name="rvv_circle_radius" format="integer" />
+<!--        节点圆是否填充-->
+        <attr name="rvv_circle_full" format="boolean" />
+
+<!--        节点内部圆颜色-->
+        <attr name="rvv_innerCircle_color" format="color" />
+
+<!--        内容颜色-->
+        <attr name="rvv_content_color" format="color" />
+<!--        内容大小-->
+        <attr name="rvv_content_size" format="integer" />
+
+
+
+
+
+    </declare-styleable>
+
+</resources>

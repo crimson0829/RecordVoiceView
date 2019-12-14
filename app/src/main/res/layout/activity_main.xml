@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.crimson.record.view.RecordVoiceView
+        android:id="@+id/rv_view"
+        android:layout_width="match_parent"
+        app:rvv_speed="80"
+        app:rvv_voice_mode="record"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_rec"
+        android:layout_width="80dp"
+        android:text="start"
+        android:layout_marginLeft="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pause"
+        android:layout_width="80dp"
+        android:text="pause"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="30dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_complete"
+        android:layout_width="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_view"
+        android:text="complete"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>

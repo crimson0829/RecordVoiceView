@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">record_library</string>
+    <string name="recording">正在识别...</string>
+</resources>
