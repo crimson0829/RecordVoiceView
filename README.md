@@ -9,7 +9,7 @@ RecordVoiceView -- 录音控件，支持语音的录制和播放
 RecordNotification -- 录音通知栏
 
 
-##使用
+## 使用
 
 ```
     <com.crimson.record.view.RecordVoiceView
@@ -43,11 +43,11 @@ RecordNotification -- 录音通知栏
                }
            }
            
-     //开始录音
-    rv_view.startRecord()
+   //开始录音
+   rv_view.startRecord()
     
-    //暂停录音
-    rv_view.pauseRecord()
+   //暂停录音
+   rv_view.pauseRecord()
     
    //完成录音
    val nodes = rv_view.completeRecord()
@@ -59,13 +59,13 @@ RecordNotification -- 录音通知栏
    val totalHeight = rv_view.totalHeight()
    
    //构建播放节点
-    rv_view.buildPlayNode(nodes,height,time)
+   rv_view.buildPlayNode(nodes,height,time)
     
    //开始播放录音
    rv_view.startPlay()
    
    //暂停录音播放
-    rv_view.pausePlay()
+   rv_view.pausePlay()
     
    //释放
    rv_view.release()
@@ -85,17 +85,17 @@ RecordNotification -- 录音通知栏
     }
     
     //展示
-     notify.show()
-     //暂停
-     notify.pause()
-     //释放
-     notify.release()
+    notify.show()
+    //暂停
+    notify.pause()
+    //释放
+    notify.release()
 
 ```
 
 
 
-#属性
+# 属性
 
 
 | 属性                   | 方法          | 定义                     |
@@ -131,13 +131,15 @@ RecordNotification -- 录音通知栏
 |                 | setOnlineClipTime()       | 设置有网模式节点切割时间间隔，默认5s                  |
 |                 | setLocalClipTime()       | 设置本地模式节点切割时间间隔，默认15s                  |
 |                 | setRecordMode()       | 设置录音模式                  |
-|                 
+               
 
-##ASR语音识别转换为文字
+## ASR语音识别转换为文字
 
 提供了百度ASR的实现baidu_asr_library -- BDOnlineRecordImpl；
-[百度ASR申请地址](https://ai.baidu.com/tech/speech)
+
 在 AndroidManifest.xml 添加自己申请的 APP_ID、API_KEY、SECRET_KEY。
+
+[百度ASR申请地址](https://ai.baidu.com/tech/speech)
 
 如果想要自己实现，请实现 IRecorder.IOnlineRecorder 接口，并自己实现方法，设置实现类  RecordVoiceView.setOnlineRecord() 。
 
