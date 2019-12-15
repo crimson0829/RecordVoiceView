@@ -8,6 +8,13 @@ RecordVoiceView -- 录音控件，支持语音的录制和播放
 
 RecordNotification -- 录音通知栏
 
+
+![Lighter](https://github.com/crimson0829/RecordVoiceView/blob/master/snapshot/shot1.png)
+
+
+![Lighter](https://github.com/crimson0829/RecordVoiceView/blob/master/snapshot/shot2.png)
+
+
 ## 引入
 
 单独引用录音库
