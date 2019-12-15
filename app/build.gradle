@@ -45,8 +45,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation project(":baidu_asr_library")
-    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"//2.2.15
+
+
+    implementation "com.github.crimson0829:RecordVoiceView:1.0"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
     implementation "com.squareup.okio:okio:2.4.1"
 }
