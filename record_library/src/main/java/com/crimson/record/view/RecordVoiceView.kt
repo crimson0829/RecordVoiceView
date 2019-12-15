@@ -87,7 +87,7 @@ class RecordVoiceView @JvmOverloads constructor(
     //正在识别大小
     var recognizeSize = 0
     //正在识别是否加粗
-    var rercognizeBold = false
+    var recognizeBold = false
     //正在识别文字
     var recognizeText = ""
     //识别文字背景
@@ -107,15 +107,15 @@ class RecordVoiceView @JvmOverloads constructor(
     //内容大小
     var contentSize = 0
     //翻译内容padding
-    var concentPadding = 30
+    var contentPadding = 30
     //最小节点高度
     var minNodeHeight = 150
     //录音目录
     var recordDir: String? = null
-    //录音文件名称
-    var recordFileName: String? = null
     //录音文件设置
     var recordConfig: RecordConfig? = null
+    //录音文件名称
+    private var recordFileName: String? = null
     //虚线路径
     private var mPath = Path()
     //画笔
@@ -253,7 +253,7 @@ class RecordVoiceView @JvmOverloads constructor(
                     Color.parseColor("#999999")
                 )
                 recognizeSize = getInt(R.styleable.RecordVoiceView_rvv_recognize_size, dip2px(14))
-                rercognizeBold = getBoolean(R.styleable.RecordVoiceView_rvv_recognize_bold, true)
+                recognizeBold = getBoolean(R.styleable.RecordVoiceView_rvv_recognize_bold, true)
                 recognizeTextBg = getColor(
                     R.styleable.RecordVoiceView_rvv_recognize_text_bg,
                     Color.parseColor("#f5f5f5")
@@ -320,7 +320,7 @@ class RecordVoiceView @JvmOverloads constructor(
             style = Paint.Style.FILL
             isAntiAlias = true
             textSize = recognizeSize.toFloat()
-            isFakeBoldText = rercognizeBold
+            isFakeBoldText = recognizeBold
             textAlign = Paint.Align.CENTER
             style = Paint.Style.FILL
             isAntiAlias = true
@@ -356,7 +356,7 @@ class RecordVoiceView @JvmOverloads constructor(
             textAlign = Paint.Align.LEFT
         }
 
-        setBackgroundColor(ContextCompat.getColor(context,android.R.color.white))
+        setBackgroundColor(ContextCompat.getColor(context, android.R.color.white))
 
     }
 
@@ -605,7 +605,7 @@ class RecordVoiceView @JvmOverloads constructor(
         return StaticLayout(
             content,
             mContentPaint,
-            windowWidth - thumbRadius * 2 - originLeft - concentPadding * 2,
+            windowWidth - thumbRadius * 2 - originLeft - contentPadding * 2,
             Layout.Alignment.ALIGN_NORMAL,
             1.0f,
             0.0f,
@@ -759,10 +759,10 @@ class RecordVoiceView @JvmOverloads constructor(
             )
             if (status == Status.RECORDING && recorder?.recordMode() === IRecorder.RecordMode.ONLINE) { //展示正在识别
                 val rectF = RectF(
-                    (originLeft + thumbRadius * 2 + concentPadding).toFloat(),
-                    (thumbY + concentPadding).toFloat(),
-                    (originLeft + thumbRadius * 2 + concentPadding + dip2px(100)).toFloat(),
-                    (thumbY + concentPadding + dip2px(35)).toFloat()
+                    (originLeft + thumbRadius * 2 + contentPadding).toFloat(),
+                    (thumbY + contentPadding).toFloat(),
+                    (originLeft + thumbRadius * 2 + contentPadding + dip2px(100)).toFloat(),
+                    (thumbY + contentPadding + dip2px(35)).toFloat()
                 )
                 canvas.drawRoundRect(rectF, 50f, 50f, mRecognizeBgPaint)
                 //计算baseline
@@ -778,12 +778,12 @@ class RecordVoiceView @JvmOverloads constructor(
                 if (i == 0) {
                     val dy = nodes[i].distance - mTimeDistance
                     canvas.translate(
-                        originLeft + thumbRadius * 2 + concentPadding.toFloat(),
+                        originLeft + thumbRadius * 2 + contentPadding.toFloat(),
                         if (dy < 0) 0f else dy.toFloat()
                     )
                 } else {
                     canvas.translate(
-                        originLeft + thumbRadius * 2 + concentPadding.toFloat(),
+                        originLeft + thumbRadius * 2 + contentPadding.toFloat(),
                         nodes[i].distance.toFloat()
                     )
                 }
@@ -806,9 +806,9 @@ class RecordVoiceView @JvmOverloads constructor(
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 canMoveIcon =
-                    x < originLeft + thumbRadius * 2 + concentPadding && y < lineDrawHeight
+                    x < originLeft + thumbRadius * 2 + contentPadding && y < lineDrawHeight
                 canEditContent =
-                    x > originLeft + thumbRadius * 2 + concentPadding && y < lineDrawHeight
+                    x > originLeft + thumbRadius * 2 + contentPadding && y < lineDrawHeight
                 if (canMoveIcon) { //如果可移动，请求父控件不拦截事件
                     thumbY = y.toInt()
                     val parent = parent
@@ -903,9 +903,9 @@ class RecordVoiceView @JvmOverloads constructor(
                 }
                 child.layoutParams = lp
                 //这是edittext属性
-                child.setTextSize(TypedValue.COMPLEX_UNIT_PX,contentSize.toFloat())
+                child.setTextSize(TypedValue.COMPLEX_UNIT_PX, contentSize.toFloat())
                 child.setTextColor(contentColor)
-                child.setPadding(concentPadding, 0, concentPadding, 0)
+                child.setPadding(contentPadding, 0, contentPadding, 0)
                 child.setBackgroundColor(
                     ContextCompat.getColor(
                         context,

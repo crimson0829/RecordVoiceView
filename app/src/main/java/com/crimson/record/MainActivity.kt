@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat
 import com.crimson.baidu_asr_library.impl.BDOnlineRecordImpl
 import com.crimson.record.data.RecordNodeData
 import com.crimson.record.notification.RecordNotification
+import com.crimson.record.view.IRecorder
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,9 +32,12 @@ class MainActivity : AppCompatActivity() {
         rv_view.apply {
             //设置有网状态下录音实现
             setOnlineRecord(BDOnlineRecordImpl(context))
-            setOnlineClipTime(4)
+            //设置有网切割时间间隔
+            setOnlineClipTime(5)
+            //设置本地切割时间间隔
             setLocalClipTime(15)
-            //各种属性设置
+            //设置录音模式
+            setRecordMode(IRecorder.RecordMode.ONLINE)
             //监听器设置
             setCallBack {
 
@@ -42,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                     println("status -> ${it.toString()}")
 
                 }
+
 
             }
         }

@@ -34,6 +34,8 @@ class PlayActivity : AppCompatActivity() {
         }
 
 
+
+
     }
 
     override fun onDestroy() {
