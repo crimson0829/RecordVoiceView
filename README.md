@@ -166,13 +166,14 @@ dependencies {
 使用百度ASR实现语音识别
 
 
-提供了百度ASR的实现库baidu_asr_library -- BDOnlineRecordImpl；
+提供了百度ASR的实现库 baidu_asr_library -- BDOnlineRecordImpl；
 
 **在 AndroidManifest.xml 添加自己申请的 APP_ID、API_KEY、SECRET_KEY。**
 
 [百度ASR申请地址](https://ai.baidu.com/tech/speech)
 
-如果想要自己实现，请实现 IRecorder.IOnlineRecorder 接口，并自己实现方法，设置实现类  RecordVoiceView.setOnlineRecord() 。
+如想提供其他语音识别，需实现 IRecorder.IOnlineRecorder 接口，并设置实现类 RecordVoiceView.setOnlineRecord(*) 。
+
 
 
 ## License
