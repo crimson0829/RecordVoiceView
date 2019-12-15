@@ -15,9 +15,9 @@ RecordNotification -- 录音通知栏
 ```
 dependencies {
             
-	        implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.0'	
+    implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.0'	
 	       	              
-	}
+}
 	
 ```
 
@@ -26,12 +26,13 @@ dependencies {
 ```
 dependencies {
                 
-    	             implementation "com.github.crimson0829:RecordVoiceView:1.0"
-                     //rx and okio
-                     implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
-                     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
-                     implementation "com.squareup.okio:okio:2.4.1"     
-    	}
+    implementation "com.github.crimson0829:RecordVoiceView:1.0"
+    //rx and okio
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
+    implementation "com.squareup.okio:okio:2.4.1"  
+       
+}
     	
 ```
 
@@ -49,6 +50,7 @@ dependencies {
 
 ```
      rv_view.apply {
+     
                //设置有网状态下录音实现
                setOnlineRecord(BDOnlineRecordImpl(context))
                //设置有网切割时间间隔
@@ -65,8 +67,7 @@ dependencies {
                        println("status -> ${it.toString()}")
    
                    }
-   
-   
+     
                }
            }
            
@@ -168,8 +169,9 @@ dependencies {
 ```
 dependencies {
                 
-    	        implementation 'com.github.crimson0829.RecordVoiceView:baidu_asr_library:1.0'	      
-    	}
+    implementation 'com.github.crimson0829.RecordVoiceView:baidu_asr_library:1.0'
+    	      
+}
     	
 ```
 
