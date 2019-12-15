@@ -11,7 +11,7 @@ RecordNotification -- 录音通知栏
 
 <br>
 
-![RecordVoiceView](https://github.com/crimson0829/RecordVoiceView/blob/master/snapshot/shot1.jpeg)
+![RecordVoiceView](https://github.com/crimson0829/RecordVoiceView/blob/master/snapshot/shot1.jpg)
 
 <br>
 
