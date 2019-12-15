@@ -151,7 +151,8 @@ dependencies {
 | rvv_innerCircle_color                | innerCircleColor       | 节点内部圆颜色                  |
 | rvv_content_color                | contentColor       | 识别内容颜色                  |
 | rvv_content_size                | contentSize       | 识别内容字体大小                  |
-|                 | contentPadding       | 识别内容padding值                  |
+|                 | recognizeText       | 设置'正在识别'文字                  |
+|                 | contentPadding       | 识别文字padding值                  |
 |                 | minNodeHeight       | 最小节点高度                  |
 |                 | recordDir       | 录音文件夹路径                  |
 |                 | recordConfig       | 录音文件参数配置                  |
