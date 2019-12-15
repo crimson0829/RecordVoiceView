@@ -20,8 +20,7 @@ allprojects {
         google()
         jcenter()
         maven { url "https://oss.jfrog.org/libs-snapshot" }
-        maven { url 'https://jitpack.io'
-            credentials { username authToken }}
+        maven { url 'https://jitpack.io'}
 
         flatDir{
             dirs project(":baidu_asr_library").file("libs")
