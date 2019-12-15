@@ -19,31 +19,20 @@ RecordNotification -- 录音通知栏
 
 ## 引入
 
-单独引用录音库
 
 ```
 dependencies {
             
     implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.0'	
+    //rx and okio
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
+    implementation "com.squareup.okio:okio:2.4.1" 
 	       	              
 }
 	
 ```
 
-全引用
-
-```
-dependencies {
-                
-    implementation "com.github.crimson0829:RecordVoiceView:1.0"
-    //rx and okio
-    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
-    implementation "com.squareup.okio:okio:2.4.1"  
-       
-}
-    	
-```
 
 
 ## 使用
@@ -79,7 +68,7 @@ dependencies {
      
                }
            }
-           
+                  
    //开始录音
    rv_view.startRecord()
     
@@ -118,7 +107,7 @@ dependencies {
             .smallIcon()
             .largeIcon()
             .recordingTitle()
-           .pauseTitle()
+            .pauseTitle()
     }
     
     //展示
@@ -176,16 +165,8 @@ dependencies {
 
 使用百度ASR实现语音识别
 
-```
-dependencies {
-                
-    implementation 'com.github.crimson0829.RecordVoiceView:baidu_asr_library:1.0'
-    	      
-}
-    	
-```
 
-提供了百度ASR的实现baidu_asr_library -- BDOnlineRecordImpl；
+提供了百度ASR的实现库baidu_asr_library -- BDOnlineRecordImpl；
 
 **在 AndroidManifest.xml 添加自己申请的 APP_ID、API_KEY、SECRET_KEY。**
 

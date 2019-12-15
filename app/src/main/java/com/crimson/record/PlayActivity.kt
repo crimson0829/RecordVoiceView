@@ -33,9 +33,6 @@ class PlayActivity : AppCompatActivity() {
                 rv_view.pausePlay()
         }
 
-
-
-
     }
 
     override fun onDestroy() {

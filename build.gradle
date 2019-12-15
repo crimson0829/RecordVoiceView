@@ -22,10 +22,10 @@ allprojects {
         maven { url "https://oss.jfrog.org/libs-snapshot" }
         maven { url 'https://jitpack.io'}
 
-        flatDir{
-            dirs project(":baidu_asr_library").file("libs")
-
-            }
+//        flatDir{
+//            dirs project(":baidu_asr_library").file("libs")
+//
+//            }
 
 
     }
