@@ -36,6 +36,7 @@ internal class RxRecordTime {
                     RxBus.get()?.post(RxCode.RECORD_TIME_CODE, RecordTime(min, sec))
                 }
 
+
         /**
          * 暂停或停止计时器
          */

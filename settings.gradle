@@ -1,2 +1,2 @@
-include ':app',  ':baidu_asr_library'
+include ':app', ':record_library', ':baidu_asr_library'
 rootProject.name='record_voice'

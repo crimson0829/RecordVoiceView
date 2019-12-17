@@ -25,7 +25,7 @@ dependencies {
             
     implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.0'	
     //rx and okio
-    implementation "io.reactivex.rxjava3:rxjava:3.0.0-RC5"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0-SNAPSHOT"
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0-SNAPSHOT'
     implementation "com.squareup.okio:okio:2.4.1" 
 	       	              

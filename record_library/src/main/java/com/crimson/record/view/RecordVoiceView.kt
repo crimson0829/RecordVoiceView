@@ -274,7 +274,6 @@ class RecordVoiceView @JvmOverloads constructor(
                 )
                 contentSize = getInt(R.styleable.RecordVoiceView_rvv_content_size, dip2px(15))
 
-
                 recycle()
             }
 
@@ -329,8 +328,6 @@ class RecordVoiceView @JvmOverloads constructor(
         mRecognizeBgPaint.run {
             color = recognizeTextBg
         }
-
-
 
         recognizeText = context.getString(R.string.recording)
 
