@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.crimson.record.view
 
 import android.app.Activity
@@ -32,8 +34,8 @@ import com.crimson.record.player.AudioPlayer
 import com.crimson.record.util.RxRecordTime.Companion.recordTime
 import com.crimson.record.util.SoftKeyBoardListener.Companion.setListener
 import com.crimson.record.util.SoftKeyBoardListener.OnSoftKeyBoardChangeListener
-import io.reactivex.rxjava3.disposables.Disposable
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import java.io.File
 
 /**

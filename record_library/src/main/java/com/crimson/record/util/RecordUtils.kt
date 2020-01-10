@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.crimson.record.util
 
 import android.content.Context

@@ -9,7 +9,7 @@ import androidx.annotation.DrawableRes
 import com.crimson.record.bus.RxBus.Companion.get
 import com.crimson.record.bus.RxCode
 import com.crimson.record.data.RecordTime
-import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.disposables.Disposable
 
 /**
  * @author crimson
