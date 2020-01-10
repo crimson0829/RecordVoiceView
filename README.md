@@ -22,8 +22,10 @@ RecordNotification -- 录音通知栏
 
 ```
 dependencies {
-            
-    implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.1'	
+    
+    implementation 'com.github.crimson0829.RecordVoiceView:record_library:1.1'
+    implementation 'com.github.crimson0829.RecordVoiceView:baidu_asr_library:1.1'
+    
 }
 	
 ```
@@ -31,6 +33,7 @@ dependencies {
 
 
 ## 使用
+
 
 ```
     <com.crimson.record.view.RecordVoiceView
